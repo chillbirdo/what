@@ -1,0 +1,11 @@
+#!/bin/bash
+
+LOCATION_OF_THAT_SCRIPT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+if { [ $# -eq 0 ] || [ -z "$1" ]; }
+    then
+        ls $LOCATION_OF_THAT_SCRIPT
+        exit 0
+else
+        cat $LOCATION_OF_THAT_SCRIPT/$1
+fi
